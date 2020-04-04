@@ -1,0 +1,6 @@
+.env
+.vscode
+.mypy_cache
+
+extractor/__pycache__
+extractor/test.py

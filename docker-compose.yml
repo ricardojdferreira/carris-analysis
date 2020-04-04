@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - "${PG_PORT}:5432"
+    environment:
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+  metabase:
+    image: metabase/metabase:latest
+    ports:
+      - "3000:3000"
+  extractor:
+    build:
+      context: ./extractor
+    env_file:
+      - .env
+    depends_on: 
+      - "postgres"
+    command: python /app/main.py --database $PG_DATABASE --user $PG_USERNAME --password $PG_PASSWORD --host $PG_HOST --port $PG_PORT --days $DAYS

@@ -3,7 +3,7 @@
 ## Project Goal
 This project aims to provide the means to analyse data of the Lisbon Public Bus Transport Network [Carris](http://www.carris.pt/).
 
-It was used the public Carris API in order to obtain the data. The API is refferenced here: https://carris.tecmic.com/index.html 
+The public Carris API was used in order to obtain the data. The API is refferenced here: https://carris.tecmic.com/index.html 
 
 ## Dependencies
 Install the following in your machine
